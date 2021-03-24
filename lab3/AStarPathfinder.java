@@ -77,6 +77,7 @@ public class AStarPathfinder
         {
             for (int x = loc.xCoord - 1; x <= loc.xCoord + 1; x++)
             {
+                if ((y == -1 && x != 0) || (y == 1 && x != 0)) continue;
                 Location nextLoc = new Location(x, y);
 
                 // If "next location" is outside the map, skip it.
